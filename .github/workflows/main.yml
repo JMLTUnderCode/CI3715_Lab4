@@ -27,4 +27,7 @@ jobs:
           pipenv run pytest --cov
       - name: Run black formatter
         uses: rickstaa/action-black@v1.3.3
+      - name: Pytest Coverage Commentator
+        uses: coroo/pytest-coverage-commentator@v1.0.2
+    
             
