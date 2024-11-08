@@ -6,8 +6,15 @@ Los números negativos no son aceptados
 """
 
 def fibonacci(position):
-  if(position < 0):
-    raise ValueError("Invalid input")
-  if(position == 1 or position == 2):
-    return 1
+  # Error en caso de valores negativos.
+  if(position < 0): raise ValueError("Invalid input")
+
+  # (INCLUIR) caso base cuando tenemos valor 0.
+  if(position == 0): return 0
+
+  # Caso base cuando tenemos valor 1 y 2.
+  if(position == 1 or position == 2): return 1
+  
+  # Caso recursivo.
   return fibonacci(position - 1) + fibonacci(position - 2)
+  
